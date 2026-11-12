@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B132B" />
+      <stop offset="50%" stop-color="#1C2541" />
+      <stop offset="100%" stop-color="#0B132B" />
+    </linearGradient>
+
+    <!-- Metallic Gold Plate Rim Gradient -->
+    <linearGradient id="goldRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE89C" />
+      <stop offset="30%" stop-color="#F59E0B" />
+      <stop offset="70%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#78350F" />
+    </linearGradient>
+
+    <!-- Inner Plate Basin Gradient -->
+    <radialGradient id="plateBasin" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="85%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#090D16" />
+    </radialGradient>
+
+    <!-- Spoon Gold Metallic Gradient -->
+    <linearGradient id="spoonGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" />
+      <stop offset="25%" stop-color="#FCD34D" />
+      <stop offset="65%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#92400E" />
+    </linearGradient>
+
+    <!-- Inner Spoon Bowl Shadow -->
+    <radialGradient id="spoonBowlShade" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFFBEB" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#78350F" />
+    </radialGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+
+    <filter id="plateGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#F59E0B" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Container (Squircle App Icon) -->
+  <rect width="512" height="512" rx="120" fill="url(#bgGrad)" />
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="none" stroke="#FBBF24" stroke-opacity="0.15" stroke-width="2" />
+
+  <!-- Plate Group -->
+  <g filter="url(#shadow)">
+    <!-- Outer Gold Rim -->
+    <circle cx="256" cy="256" r="180" fill="url(#goldRim)" filter="url(#plateGlow)" />
+
+    <!-- Inner Metallic Ridge -->
+    <circle cx="256" cy="256" r="162" fill="none" stroke="#FEF3C7" stroke-width="2.5" stroke-opacity="0.6" />
+
+    <!-- Basin -->
+    <circle cx="256" cy="256" r="142" fill="url(#plateBasin)" />
+    <circle cx="256" cy="256" r="142" fill="none" stroke="url(#goldRim)" stroke-width="3" stroke-opacity="0.5" />
+
+    <!-- Decorative Accent Ring -->
+    <circle cx="256" cy="256" r="96" fill="none" stroke="#FBBF24" stroke-width="2" stroke-opacity="0.3" />
+  </g>
+
+  <!-- Spoon Group (Angled at -38°) -->
+  <g transform="rotate(-38 256 256)" filter="url(#shadow)">
+    <!-- Spoon Shadow on Plate -->
+    <path d="M256 82 C222 82 218 152 245 196 L245 408 C245 420 267 420 267 408 L267 196 C294 152 290 82 256 82 Z" fill="#000000" opacity="0.35" transform="translate(6, 10)" />
+
+    <!-- Outer Spoon Body -->
+    <path d="M256 82 C222 82, 218 152, 245 196 L247 408 C247 418, 265 418, 265 408 L267 196 C290 152, 286 82, 256 82 Z" fill="url(#spoonGold)" />
+
+    <!-- Spoon Bowl Cavity -->
+    <ellipse cx="256" cy="136" rx="22" ry="38" fill="url(#spoonBowlShade)" />
+    
+    <!-- Specular Reflection Highlight -->
+    <path d="M242 118 C238 132 240 148 245 156 C243 145 242 128 246 118 Z" fill="#FFFFFF" opacity="0.75" />
+
+    <!-- Handle Inset Detail -->
+    <path d="M256 215 L256 385" stroke="#FFFBEB" stroke-opacity="0.6" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="248" y1="196" x2="264" y2="196" stroke="#78350F" stroke-width="2" opacity="0.5" />
+  </g>
+</svg>

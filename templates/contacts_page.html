@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/static/images/favicon.svg">
+    <link rel="stylesheet" href="/static/css/contacts_page.css">
+    <title>Contacts | Savannah Spoon Inn</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navigation-pane">
+            <h1>Savannah Spoon Inn</h1>
+            <ul>
+                <li><a href="landing_page.html">Home</a></li>
+                <li><a href="landing_page.html#menu">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="welcome-message-box">
+            <h2>
+                GET IN TOUCH WITH THE SAVANNAH SPOON INN
+            </h2>
+            <p>
+                “Where every plate tells a story.”
+            </p>
+        </div>
+
+        <div class="contact">
+            <!-- =================Contact details==================== -->
+            <section>
+                <h3 class="section-title">Find Us</h3>
+                <hr class="section-rule">
+                <div class="info-cards">
+                    <div class="panel info-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#FAF3E3"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M32 58 C20 42 14 34 14 26 C14 16 22 8 32 8 C42 8 50 16 50 26 C50 34 44 42 32 58 Z"
+                                fill="#FAF3E3" fill-opacity="0.25" />
+                            <circle cx="32" cy="26" r="7" />
+                        </svg>
+                        <h4>Visit Us</h4>
+                        <p>Savannah Spoon Inn<br><br>043<br>Nairobi, Kenya</p>
+                    </div>
+                    <div class="panel info-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#FAF3E3"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path
+                                d="M16 8 H26 L30 20 L24 26 C27 33 31 37 38 40 L44 34 L56 38 V48 C56 52 53 56 48 56 C28 55 9 36 8 16 C8 11 12 8 16 8 Z"
+                                fill="#FAF3E3" fill-opacity="0.25" />
+                        </svg>
+                        <h4>Call Us</h4>
+                        <p><a href="tel:+254700000000">+254 798765432</a><br><br>Reservations and general enquiries</p>
+                    </div>
+                    <div class="panel info-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#FAF3E3"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="8" y="14" width="48" height="36" rx="4" fill="#FAF3E3" fill-opacity="0.25" />
+                            <path d="M10 18 L32 36 L54 18" />
+                        </svg>
+                        <h4>Email Us</h4>
+                        <p><a href="mailto:hello@savannahspooninn.co.ke">hello@savannahspooninn.co.ke</a><br><br>We
+                            reply within one working day</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =================Form and hours==================== -->
+            <section>
+                <h3 class="section-title">Send Us a Message</h3>
+                <hr class="section-rule">
+                <div class="panel form-area">
+                    <div>
+                        <h3>We would love to hear from you</h3>
+                        <form id="contact-form" novalidate>
+                            <div class="field-row">
+                                <div class="field">
+                                    <label for="name">Your name</label>
+                                    <input type="text" id="name" name="name" autocomplete="name" required>
+                                </div>
+                                <div class="field">
+                                    <label for="phone">Phone (optional)</label>
+                                    <input type="tel" id="phone" name="phone" autocomplete="tel">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" autocomplete="email" required>
+                            </div>
+                            <div class="field">
+                                <label for="topic">What is this about?</label>
+                                <select id="topic" name="topic">
+                                    <option>General enquiry</option>
+                                    <option>Table reservation</option>
+                                    <option>Private event or catering</option>
+                                    <option>Feedback</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button class="btn" type="submit">Send Message</button>
+                            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+
+                        </form>
+                    </div>
+
+                    <div class="hours">
+                        <h3>Opening Hours</h3>
+                        <ul>
+                            <li><span>Monday – Friday</span><span>8:00 AM – 10:00 PM</span></li>
+                            <li><span>Saturday</span><span>8:00 AM – 11:00 PM</span></li>
+                            <li><span>Sunday</span><span>9:00 AM – 9:00 PM</span></li>
+                        </ul>
+                        <p class="hours-note">
+                            Planning a birthday, a team lunch or a family feast? Choose “Private event or catering” in
+                            the form and we will help you set the table.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =================Call to action==================== -->
+            <section>
+                <div class="panel cta">
+                    <h3>Hungry Already?</h3>
+                    <p>
+                        Take a look at what is cooking, then come and sit at our table.
+                    </p>
+                    <a class="btn" href="landing_page.html#menu">View the Menu</a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p style="background:  linear-gradient(90deg, #3f5e3aa8, #5f895a9c, #a7d8b88f);
+            width: 100dvw; text-align: center;">
+            &copy; 2026 Savannah Spoon Inn
+        </p>
+    </footer>
+</body>
+
+</html>

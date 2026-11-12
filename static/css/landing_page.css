@@ -1,0 +1,262 @@
+html {
+            font-size: 16px;
+            font-family:
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Oxygen,
+                Ubuntu,
+                Cantarell,
+                "Open Sans",
+                "Helvetica Neue",
+                sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        @media (max-width: 700px) {
+            html {
+                font-size: 15px;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1;
+        }
+
+        body {
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("/static/images/bg4_refined.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            width: 100vw;
+            color: #faf3e3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            /* Ensures the navigation bar stays on top of content */
+        }
+
+        .navigation-pane {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            padding-right: 10%;
+            background: linear-gradient(90deg, #3f5e3aa8, #5f895a9c, #a7d8b88f);
+            backdrop-filter: blur(5px);
+            /*nice glassmorphism effect when content scrolls under */
+        }
+
+        .navigation-pane ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .navigation-pane ul a {
+            color: #faf3e3;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            /* Removed custom height and overflow rules to let content flow naturally */
+        }
+
+        .welcome-message-box {
+            width: 100%;
+            text-align: center;
+            padding: 1rem;
+            font-weight: 100;
+        }
+
+        .welcome-message-box h2 {
+            font-size: 2.5rem;
+            font-weight: 100;
+            margin-bottom: 1rem;
+            line-height: 1;
+            font-family:
+                -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+                sans-serif;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .menu section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .menu section h3 {
+            font-size: 1.7rem;
+            line-height: 1.3;
+        }
+
+        .menu section div {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+            gap: 0.5rem;
+            width: 100%;
+            margin-top: 0.875rem;
+            padding: 0 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .menu section figure {
+            border: 2px solid #2b2118;
+            border-radius: 0.5rem;
+            background-color: #faf3e3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+            padding-bottom: 0.3rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .menu section figure:hover {
+            transform: translateY(-2px);
+            box-shadow: -2px 4px 10px 1px #faf3e366;
+        }
+
+        .menu section figure img {
+            width: 100%;
+            aspect-ratio: 1;
+            height: auto;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+
+        .menu section figure figcaption {
+            font-size: 0.78rem;
+            color: #2b2118;
+        }
+
+        .menu details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            border: 2px solid #D9A441;
+            border-radius: 0.5rem;
+            padding: 0.3rem;
+
+        }
+
+        .menu details a {
+            color: #EADFC0;
+        }
+
+        .menu details a:visited {
+            color: #D9A441;
+        }
+
+
+        /* .menu section section {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    .menu section section div {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); 
+                        gap: 0.5rem;
+                        width: 100%;
+                        margin-top: 0.875rem;
+                        padding: 0 1rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    .menu section section figure {
+                        border: 2px solid #2B2118;
+                        border-radius: 0.5rem;
+                        background-color: #FAF3E3;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 0.3rem;
+                        padding-bottom: 0.3rem;
+                    }
+
+                    .menu section section figure img {
+                        width: 100%;
+                        aspect-ratio: 1;
+                        height: auto;
+                        object-fit: cover;
+                        border-radius: 0.5rem;
+                    }
+
+                    .menu section section figure figcaption {
+                        font-size: 0.78rem;
+                        color: #2B2118;
+                    } */
+
+        .intro-images {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+            gap: 0.5rem;
+            width: 50%;
+            margin-top: 0.875rem;
+            padding: 0 1rem;
+            margin-bottom: 1rem;
+            
+        }
+
+    
+
+        @media (max-width: 768px) {
+            .intro-images {
+                width: 100%;
+            }
+        }
+
+        .intro-images img {
+            width: 100%;
+            aspect-ratio: 1;
+            height: auto;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+         .intro-images img:hover{
+            transform: translateY(-2px);
+            box-shadow: -2px 4px 10px 1px #faf3e366;
+        }
